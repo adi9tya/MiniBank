@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankist</title>
+    <script src="https://kit.fontawesome.com/401509159e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <p class="Message">Log In to get started!</p>
+        <i class="fab fa-slack fa-3x"></i>
+
+        <form class="login">
+            <input type="text" placeholder="Username" class="user user_login">
+            <input type="password" placeholder="PIN" maxlength="4" class="user user-psswrd">
+            <button class="login_btn">&rarr;</button>
+        </form>
+    </nav>
+    <main class="app">
+        <div class="main">
+            <div class="balance">
+                <div>
+                    <p class="balance_label">Current Balance</p>
+                    <p class="balance_date">
+                        As of <span class="date">05/03/2037</span>
+                    </p>
+                </div>
+                <div class="balance_value">
+                    0000€
+                </div>
+            </div>
+    
+            <div class="all">
+                <div class="movements">
+                    <div class="movement_row">
+                    <div class="movement_type movement_deposit">2 deposit</div>
+                    <div class="movement_date">3 days ago</div>
+                    <div class="movement_value">4000€</div>
+                    </div>
+        
+                    <div class="movement_row">
+                        <div class="movement_type movement_deposit">2 deposit</div>
+                        <div class="movement_date">3 days ago</div>
+                        <div class="movement_value">4000€</div>
+                    </div>
+                    <div class="movement_row">
+                        <div class="movement_type movement_withdrawal">1 withdrawal</div>
+                        <div class="movement_date">24/01/2037</div>
+                        <div class="movement_value">-1000€</div>
+                    </div>
+                </div>
+
+                <div class="operations">
+                    <div class="card operation-transfer">
+                        <h2>Transfer Money</h2>
+                        <form class="form form-transfer">
+                            <input type="text" class="form_input form_input_to">
+                            <input type="text" class="form_input form_input_amount">
+                            <button class="form_btn form_btn_transfer">&rarr;</button>
+                            <div class="label">
+                                <div class="form_label">Transfer to</div>
+                            <div class="form_label">Amount</div>
+                            </div>
+                        </form>
+                    </div>
+            
+                    <div class="card operation-loan">
+                        <h2>Request Loan</h2>
+                        <form class="form form-loan">
+                            <input type="number" class="form_input form_input_loan_amount">
+                            <button class="form_btn form_btn_loan">&rarr;</button>
+                            <div class="label">
+                                <div class="form_label form-div-loan">Amount</div>
+                            </div>
+                        </form>
+                    </div>
+            
+                    <div class="card operation-close">
+                        <h2>Close Account</h2>
+                        <form class="form form-close">
+                            <input type="text" class="form_input form_input_user close_user">
+                            <input type="password" maxlength="4" class="form_input form_input_PIN close_pin">
+                            <button class="form_btn form_btn_close">&rarr;</button>
+                            <div class="label">
+                                <div class="form_label">Confirm User</div>
+                            <div class="form_label">Confirm PIN</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="sum">
+                <div class="summary">
+                    <p class="summary_label">In</p>
+                    <p class="summary_value summary_in">0000€</p>
+                    <p class="summary_label">Out</p>
+                    <p class="summary_value summary_out">0000€</p>
+                    <p class="summary_label">Interest</p>
+                    <p class="summary_value summary_interest">0000€</p>
+                    <button class="btn-sort">&downarrow; SORT</button>
+                </div>
+        
+                
+        
+                <p class="logout-timer">
+                    You will be logged in <span class="timer">10:00</span>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

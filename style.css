@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+body{
+    background: #f3f3f3;
+    color: #444;
+    min-height: 100vh;
+    min-width: 122rem;
+    padding: 2rem;
+    overflow: scroll;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.Message{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.user{
+    border: none;
+    padding: 0.7rem 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 10rem;
+    width: 12rem;
+    margin-right: 1rem;
+    color: inherit;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+.user:focus{
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+::placeholder{
+    color: #bbb;
+}
+
+.login_btn{
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login_btn:hover,
+  .login_btn:focus,
+  .btn-sort:hover,
+  .btn-sort:focus {
+    outline: none;
+    color: #777;
+}
+
+.app{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.main{
+    width: 100rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.balance{
+    max-width: 150rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.balance_label{
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+.balance_value{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.all{
+    width: 100rem;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.movements{
+    background: white;
+    border-radius: 1.5rem;
+    flex: 50rem;
+    max-height: 47rem;
+    overflow-y: scroll;
+}
+
+.movement_row{
+    padding: 2.2rem 4rem 2.2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.movement_type{
+    height: 1.9rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 400;
+    padding: 0.2rem;
+    text-align: center;
+}
+.movement_deposit{
+    width: 10rem;
+    background: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.movement_withdrawal{
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+    width: 11rem;
+}
+
+.movement_date{
+    font-weight: 600;
+    color: #666;
+}
+
+.movement_value{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.operations{
+    flex: 47rem;
+    min-height: 45rem;
+    max-height: 80rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card{
+    height: 14rem;
+    background: chartreuse;
+    padding: 3.5rem 4rem 3.5rem 4rem;
+    border-radius: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 0.7rem;
+}
+
+form{
+    align-items: center;
+}
+.form_input{
+    width: 40%;
+    height: 2.5rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    transition: all 0.3s;
+    margin-right: 1rem;
+  }
+
+  input:focus{
+      outline: none;
+  }
+
+  .form_input:focus{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .form_btn{
+    border: none;
+    width: 8%;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .form_label{
+      width: 40%;
+      margin-right: 1rem;
+      text-align: center;
+  }
+  .label{
+      display: flex;
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+  }
+
+  .operation-transfer{
+      background: #7fff00;
+  }
+
+  .operation-loan{
+      background: #ffd700;
+  }
+
+  .operation-close{
+      background: #dc143c;
+  }
+
+  .sum{
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem;
+  }
+
+  .summary{
+      display: flex;
+      align-items: baseline;
+  }
+
+  .summary_label{
+      font-weight: 500;
+      margin-right: 1rem;
+  }
+
+  .summary_value{
+      font-size: 2.5rem;
+      margin-right: 2rem;
+  }
+
+  .summary_in,
+  .summary_interest{
+      color: #66c873;
+  }
+
+  .summary_out{
+    color: #f5465d;
+  }
+
+  .btn-sort{
+      margin-left: 2rem;
+      border: none;
+      cursor: pointer;
+  }
+
+  .timer{
+      font-weight: 600;
+  }
