@@ -177,7 +177,7 @@ const calcDate = (movementDate, locale) => {
     //     const month = `${dateS.getMonth()+1}`.padStart(2,0);
     //     const year = `${dateS.getFullYear()}`;
     //     return `${day}/${month}/${year}`;
-    return new Intl.DateTimeFormat(locale).format(now);
+    return new Intl.DateTimeFormat(locale).format(movementDate);
 }
 
 const formatNum = (acc, val) => {
