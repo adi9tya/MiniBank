@@ -100,7 +100,10 @@ const closeUser = document.querySelector('.close_user');
 const closePin = document.querySelector('.close_pin');
 
 const labelTimer = document.querySelector('.timer');
-
+const popupBtn = document.querySelector('.popup-heading');
+const popup = document.querySelector('.popup-content');
+const arrUp = document.querySelector('.up');
+const arrDown = document.querySelector('.down');
 let currentAccount;
 
 // const date = new Date();
@@ -111,6 +114,22 @@ let currentAccount;
 // const min = now.getMinutes();
 
 // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+let popupBtnDirn = false;
+popupBtn.addEventListener('click', function(e){
+    if(!popupBtnDirn){
+        popup.style.display = "flex";
+        arrUp.classList.remove("show");
+        arrDown.classList.add("show");
+        popupBtnDirn = !popupBtnDirn;
+    }
+    else{
+        popup.style.display = "none";
+        arrDown.classList.remove("show");
+        arrUp.classList.add("show");
+        popupBtnDirn = !popupBtnDirn;
+    }
+});
+
 const now = new Date();
 const options = {
     hour: 'numeric',
@@ -133,6 +152,7 @@ const createUserNames = accs => {
         acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
     });
 };
+
 
 createUserNames(accounts);
 
@@ -189,6 +209,7 @@ const formatNum = (acc, val) => {
 const dispMovements = (acc, sort) => {
     movements.innerHTML=``;
     
+    // sort elements in ascending order
     const movs = sort ? acc.movements.slice().sort((a, b) => a - b) : acc.movements;
     movs.forEach((mov, i) => {
 
