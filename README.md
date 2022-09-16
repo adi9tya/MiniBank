@@ -6,6 +6,9 @@ This is a bank application that allows you to view your deposits, withdrawals, t
 -4 accounts are available 
 
 -Username: da  Password: 1111
+
 -Username: at  Password: 2222
+
 -Username: sv  Password: 3333
+
 -Username: ss  Password: 4444
