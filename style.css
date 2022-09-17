@@ -10,6 +10,7 @@ html{
 }
 
 body{
+    position: relative;
     background: #f3f3f3;
     color: #444;
     min-height: 100vh;
@@ -237,6 +238,7 @@ form{
   }
 
   .sum{
+    width: 80rem;
       margin-top: 3rem;
       display: flex;
       justify-content: space-between;
@@ -281,9 +283,9 @@ form{
     padding: 2rem;
     z-index: 12;
     display: block;
-    position: absolute;
+    position: absolute; 
     right: 1rem;
-    bottom: 0;
+    bottom: 0; 
     font-size: 1.5rem;
     background-color: white;
     border-radius: 5px;
