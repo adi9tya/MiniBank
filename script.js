@@ -217,17 +217,15 @@ const dispMovements = (acc, sort) => {
         const formattedMov = formatNum(acc, mov);
         let html = ``;
         if(mov >= 0){
-            deposit++;
             html = `<div class="movement_row">
-            <div class="movement_type movement_deposit">${deposit} deposits</div>
+            <div class="movement_type movement_deposit">${i+1} deposits</div>
             <div class="movement_date">${date}</div>
             <div class="movement_value">${formattedMov}</div>
             </div>`;
     }
         else if(mov < 0){
-            withdrawal++;
             html = `<div class="movement_row">
-            <div class="movement_type movement_withdrawal">${withdrawal} withdrawals</div>
+            <div class="movement_type movement_withdrawal">${i+1} withdrawals</div>
             <div class="movement_date">${date}</div>
             <div class="movement_value">${formattedMov}</div>
             </div>`;
